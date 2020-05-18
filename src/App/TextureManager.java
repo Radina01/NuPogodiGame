@@ -31,4 +31,14 @@ public class TextureManager extends JComponent {
 
         graph.drawImage(image, this.x, this.y, this.width, this.height, null);
     }
+
+    public void render() {
+        Thread animationThread = new Thread(new Runnable() {
+            public void run() {
+                repaint();
+            }
+        });
+
+        animationThread.start();
+    }
 }
