@@ -9,11 +9,10 @@ public class Display {
     int width;
     int height;
 
-    public static Display getInstance(int widthSize, int heightSize, String name) {
+    public static void initInstance(int widthSize, int heightSize, String name) {
         if(instance == null) {
             instance = new Display(widthSize, heightSize, name);
         }
-        return instance;
     }
 
     public static Display getInstance() {
