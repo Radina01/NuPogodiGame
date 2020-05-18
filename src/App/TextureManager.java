@@ -1,8 +1,9 @@
 package App;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class TextureManager {
+public class TextureManager extends JComponent {
 
     private int x;
     private int y;
@@ -19,5 +20,15 @@ public class TextureManager {
         this.width = width;
         this.height = height;
         this.path = path;
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        Graphics2D graph = (Graphics2D) g;
+
+        ImageIcon imageIcon = new ImageIcon(this.path);
+        Image image = imageIcon.getImage();
+
+        graph.drawImage(image, this.x, this.y, this.width, this.height, null);
     }
 }
