@@ -21,10 +21,10 @@ public class Display {
     }
 
     private Display(int widthSize, int heightSize, String name) {
-        this.width = widthSize - 40;
-        this.height = heightSize - 40;
+        this.width = widthSize;
+        this.height = heightSize;
 
-        frame.setSize(widthSize - 24, heightSize - 2);
+        frame.setSize(widthSize, heightSize);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setTitle(name);
@@ -32,5 +32,6 @@ public class Display {
         frame.setVisible(true);
 
     }
+
 
 }
