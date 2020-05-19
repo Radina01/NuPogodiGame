@@ -33,12 +33,12 @@ public class Display {
     }
 
     public void addGraphic(TextureManager t) {
-        frame.add(t);
+        frame.getContentPane().add(t);
         frame.setVisible(true);
     }
 
-    public void removeGraphic(TextureManager t) {
-        frame.remove(t);
+    public void removeGraphic(int index) {
+        frame.getContentPane().remove(index);
     }
 
 

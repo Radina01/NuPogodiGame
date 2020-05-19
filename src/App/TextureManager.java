@@ -1,7 +1,10 @@
 package App;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.ImageIcon;
+import javax.swing.JComponent;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
 
 public class TextureManager extends JComponent {
 
