@@ -6,5 +6,9 @@ public class Main {
 
         nuPogodi.init();
 
+        while (true) {
+            nuPogodi.update();
+        }
+
     }
 }

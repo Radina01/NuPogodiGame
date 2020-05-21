@@ -14,5 +14,7 @@ public class NuPogodi {
         Display.getInstance().changePage(menu.pageManager.menuState);
     }
 
-    public void update() {}
+    public void update() {
+        menu.update();
+    }
 }
