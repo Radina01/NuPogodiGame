@@ -28,6 +28,13 @@ class PageManager {
                 new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
         );
     }
+
+    public void initScoreListState() {
+        //Display.initInstance(600, 600, "Nu Pogodi");
+        scoreListState.addGraphic(
+                new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
+        );
+    }
 }
 
 public class Menu {
@@ -36,6 +43,7 @@ public class Menu {
     public Menu() {
         pageManager.initMenuState();
         pageManager.initPlayState();
+        pageManager.initScoreListState();
         Display.getInstance().changePage(pageManager.menuState);
     }
 
@@ -50,6 +58,15 @@ public class Menu {
 
     public void update() {
     }
+
+    public static void buttonFunction(String name){
+        switch (name) {
+            case "Play": PageManager.gameState = GameState.play;break;
+            case "Records": PageManager.gameState = GameState.scoreList;break;
+            case "Exit": PageManager.gameState = GameState.exit;break;
+        }
+        changePage();
+    }
 }
 
 class Page {
@@ -58,14 +75,7 @@ class Page {
 
     public void addButton(int x, int y, int width, int height, String name) {
         JButton btn = new JButton(name);
-        btn.addActionListener(e -> {
-            switch (name) {
-                case "Play": PageManager.gameState = GameState.play;break;
-                case "Records": PageManager.gameState = GameState.scoreList;break;
-                case "Exit": PageManager.gameState = GameState.exit;break;
-            }
-            Menu.changePage();
-        }) ;
+        btn.addActionListener(e -> Menu.buttonFunction(name)) ;
         btn.setBounds(x, y, width, height);
         JPanel panel = new JPanel();
         panel.setLayout(null);
