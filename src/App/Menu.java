@@ -9,7 +9,7 @@ public class Menu {
     GameState gameState;
 
     public Menu() {
-        
+
     }
 
     public void update() {
