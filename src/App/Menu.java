@@ -17,8 +17,8 @@ class PageManager {
 
     public void initMenuState(){
         menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height/8 + 280, X_BUTTON_COORDINATE, Display.getInstance().height/8, "Play");
-        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height/8 * 2 + 30, X_BUTTON_COORDINATE, Display.getInstance().height/8, "Play");
-        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height/8 * 3 + 30, X_BUTTON_COORDINATE, Display.getInstance().height/8, "Play");
+        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height/8 * 2 + 30, X_BUTTON_COORDINATE, Display.getInstance().height/8, "Records");
+        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height/8 * 3 + 30, X_BUTTON_COORDINATE, Display.getInstance().height/8, "Exit");
     }
 }
 
@@ -50,6 +50,7 @@ class Page {
         panel.setLayout(null);
         panel.setOpaque(false);
         panel.add(btn);
+        panel.setVisible(true);
         componentList.add(panel);
     }
 

@@ -41,5 +41,14 @@ public class Display {
         frame.getContentPane().remove(index);
     }
 
-    
+    public void changePage(Page page) {
+        for (int i = 0; i < frame.getContentPane().getComponentCount(); i++) {
+            frame.getContentPane().remove(i);
+        }
+        System.out.println(page.componentList.size());
+        for (int i = 0; i < page.componentList.size(); i++) {
+            frame.getContentPane().add(page.componentList.get(i));
+            frame.setVisible(true);
+        }
+    }
 }
