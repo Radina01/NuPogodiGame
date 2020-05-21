@@ -41,5 +41,5 @@ public class Display {
         frame.getContentPane().remove(index);
     }
 
-
+    
 }
