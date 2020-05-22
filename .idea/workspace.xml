@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App/ECS/ComponentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/AnotherTestComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/TestComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NuPogodi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NuPogodi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Engine$Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/EngineSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/EntityFamily.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/EntityListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/IteratingSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TestComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TestComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/signal/Signal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/signal/SignalListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Entites.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/components/Components.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/components/ComponentsInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/components/NameComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/components/PositionComponent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +48,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chess" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="experimental" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,8 +79,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
@@ -91,7 +101,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Dimo\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,42 +113,68 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1589899317857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1589899317857" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589825671378">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590058016718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589825671378" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1589838726839">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1590146690094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589838726839" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1589838726819">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590146690094" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1590146690093">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589838726819" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1589838726803">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590146690093" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1590146690093">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589838726803" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1589838726820">
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590146690093" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1590146690093">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589838726820" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1589899398453">
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590146690093" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589899398453" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1589878141377">
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589906551635" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1590057035165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589878141377" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590057035165" />
+    <state x="65" y="0" key="new project wizard" timestamp="1590143465591">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590143465591" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589891299325">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589891299325" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="NuPogodi" type="b2602c69:ProjectViewProjectNode" />
+        <item name="NuPogodi" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>

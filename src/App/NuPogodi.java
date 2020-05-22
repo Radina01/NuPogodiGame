@@ -1,12 +1,21 @@
 package App;
 
+import App.ECS.ComponentList;
+import App.ECS.Components.AnotherTestComponent;
+import App.ECS.Components.TestComponent;
+import App.ECS.Entity;
+
 public class NuPogodi {
 
-    public void init() {
+    Entity player;
 
-        Display.initInstance(600, 600, "Nu Pogodi");
-        Display.getInstance().addGraphic(
-                new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
+    public void init() {
+        player = new Entity();
+        player.addComponent(new TestComponent());
+        player.addComponent(new AnotherTestComponent());
+
+        System.out.println(
+                player.<TestComponent>getComponent(ComponentList.TestComponent).getA()
         );
     }
 

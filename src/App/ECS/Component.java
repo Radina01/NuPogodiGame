@@ -4,7 +4,7 @@ public abstract class Component {
 
     Entity entity;
 
-    abstract void init();
-    abstract void update();
-    abstract void draw();
+    public abstract void init();
+    public abstract void update();
+    public abstract void draw();
 }
