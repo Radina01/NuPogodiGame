@@ -1,19 +1,29 @@
 package App.ECS;
 
-import App.ECS.Components.AnotherTestComponent;
-import App.ECS.Components.TestComponent;
-
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.HashMap;
 import java.util.List;
 
 public class Entity {
 
     private final byte MAX_COMPONENTS = 32;
     private final byte MAX_GROUPS = 32;
+    private List<Component> components = new ArrayList<>(MAX_COMPONENTS);
+    private BitSet groupBitSet = new BitSet(MAX_GROUPS);
+    private BitSet componentBitSet = new BitSet(MAX_COMPONENTS);
+    private int componentIndex = 0;
+    private HashMap<String, Integer> componentID = new HashMap<String, Integer>();
+    private void initBitSets() {
+        for (int i = 0; i < MAX_COMPONENTS; i++) {
+            componentBitSet.set(i, false);
+            groupBitSet.set(i,false);
+        }
+    }
 
-    List<Component> components = new ArrayList<>(MAX_COMPONENTS);
-    BitSet groupBitSet = new BitSet(MAX_GROUPS);
+    public Entity() {
+        initBitSets();
+    }
 
     public void update() {
         for (Component c : components) c.update();
@@ -34,31 +44,26 @@ public class Entity {
         groupBitSet.set(mGroup, false);
     }
 
+    public <T extends Component> boolean hasComponent(T component) {
+
+        if(componentID.get(component.getClass().getName()) != null)
+            return componentBitSet.get(componentID.get(component.getClass().getName()));
+        return false;
+    }
+
     public void addComponent(Component component) {
-        for (Component c: components) {
-            if(c.getClass().getName().equals(component.getClass().getName())) return;
-        }
-        components.add(component);
-    }
-
-    public void showAllComponentTypes() {
-        for (Component c: components) {
-            System.out.println(c.getClass().getName());
+        if(!hasComponent(component)) {
+            components.add(component);
+            componentID.put(component.getClass().getName(), componentIndex);
+            componentBitSet.set(componentIndex, true);
+            componentIndex++;
+            components.get(components.size() - 1).init();
         }
     }
 
-    public  <T extends Component>T getComponent(ComponentList component) {
-        switch (component) {
-            case TestComponent: return (T) getTypeFromComponentsArray(new TestComponent());
-            case AnotherTestComponent: return (T) getTypeFromComponentsArray(new AnotherTestComponent());
-        }
-        return null;
-    }
+    public  <T extends Component>T getComponent(T component) {
 
-    private Component getTypeFromComponentsArray(Component component) {
-        for (Component c: components) {
-            if(c.getClass().getName().equals(component.getClass().getName())) return c;
-        }
+        if(hasComponent(component)) return (T) components.get(componentID.get(component.getClass().getName()));
         return null;
     }
 

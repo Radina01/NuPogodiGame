@@ -5,7 +5,7 @@ import App.ECS.Component;
 public class TestComponent extends Component {
 
     public TestComponent() {
-        System.out.println("testComponent added");
+        //System.out.println("testComponent added");
     }
 
     public int a = 15;
