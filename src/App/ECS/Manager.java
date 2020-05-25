@@ -24,9 +24,12 @@ public class Manager {
     public ArrayList<Entity> getGroup(int group) {
         return groupedEntities.get(group);
     }
-    
 
-
+    public Entity addEntity() {
+        Entity entity = new Entity();
+        entities.add(entity);
+        return entity;
+    }
 
 
 }
