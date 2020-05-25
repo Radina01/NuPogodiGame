@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NuPogodi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NuPogodi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/ComponentList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Entity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/AnotherTestComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/AnotherTestComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/ComponentList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/AnotherTestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/AnotherTestComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TestComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Manager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

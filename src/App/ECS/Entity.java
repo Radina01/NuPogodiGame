@@ -44,7 +44,7 @@ public class Entity {
         groupBitSet.set(mGroup, false);
     }
 
-    public <T extends Component> boolean hasComponent(T component) {
+    public boolean hasComponent(Component component) {
 
         if(componentID.get(component.getClass().getName()) != null)
             return componentBitSet.get(componentID.get(component.getClass().getName()));
@@ -62,7 +62,6 @@ public class Entity {
     }
 
     public  <T extends Component>T getComponent(T component) {
-
         if(hasComponent(component)) return (T) components.get(componentID.get(component.getClass().getName()));
         return null;
     }
