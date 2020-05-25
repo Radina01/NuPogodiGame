@@ -3,18 +3,24 @@ package App;
 import App.ECS.Components.AnotherTestComponent;
 import App.ECS.Components.TestComponent;
 import App.ECS.Entity;
+import App.ECS.Manager;
 
 public class NuPogodi {
 
+    Manager manager;
     Entity player;
     Entity obj;
+    public enum groupLabels {
+        groupMap,
+        groupColliders,
+        groupPlayer,
+    }
 
     public void init() {
-        player = new Entity();
-        player.addComponent(new TestComponent());
-        System.out.println(player.hasComponent(new AnotherTestComponent()));
-        System.out.println(player.hasComponent(new TestComponent()));
-        player.addComponent(new TestComponent());
+        manager = new Manager();
+        player = new Entity(manager);
+
+        System.out.println(groupLabels.groupColliders.ordinal());
     }
 
     public void update() {

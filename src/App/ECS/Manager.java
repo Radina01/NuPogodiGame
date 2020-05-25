@@ -10,10 +10,23 @@ public class Manager {
     private HashMap<Integer, ArrayList<Entity>> groupedEntities = new HashMap<>();
 
     public void update() {
-        for (Entity e: entities) e.update();
+        for (int i = 0; i < entities.size(); i++) entities.get(i).update();
     }
 
     public void draw() {
-        for (Entity e: entities) e.draw();
+        for (int i = 0; i < entities.size(); i++) entities.get(i).draw();
     }
+
+    public void addToGroup(Entity entity, int group) {
+        groupedEntities.get(group).add(entity);
+    }
+
+    public ArrayList<Entity> getGroup(int group) {
+        return groupedEntities.get(group);
+    }
+    
+
+
+
+
 }
