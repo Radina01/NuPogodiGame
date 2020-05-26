@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Manager {
 
-    private List<Entity> entities = new ArrayList<>();
+    public List<Entity> entities = new ArrayList<>();
     private HashMap<Integer, ArrayList<Entity>> groupedEntities = new HashMap<>();
 
     public void update() {
@@ -18,6 +18,7 @@ public class Manager {
     }
 
     public void addToGroup(Entity entity, int group) {
+        groupedEntities.computeIfAbsent(group, k -> new ArrayList<>());
         groupedEntities.get(group).add(entity);
     }
 
@@ -26,7 +27,7 @@ public class Manager {
     }
 
     public Entity addEntity() {
-        Entity entity = new Entity();
+        Entity entity = new Entity(this);
         entities.add(entity);
         return entity;
     }

@@ -7,12 +7,12 @@ import java.util.List;
 
 public class Entity {
 
+    private Manager manager;
     private final byte MAX_COMPONENTS = 32;
     private final byte MAX_GROUPS = 32;
     private List<Component> components = new ArrayList<>(MAX_COMPONENTS);
     private BitSet groupBitSet = new BitSet(MAX_GROUPS);
     private BitSet componentBitSet = new BitSet(MAX_COMPONENTS);
-    private int componentIndex = 0;
     private HashMap<String, Integer> componentID = new HashMap<String, Integer>();
     private void initBitSets() {
         for (int i = 0; i < MAX_COMPONENTS; i++) {
@@ -21,9 +21,9 @@ public class Entity {
         }
     }
 
-    public Entity() {
-        initBitSets();
-        System.out.println(components.size());
+    public Entity(Manager manager) {
+        this.manager = manager;
+        initBitSets();;
     }
 
     public void update() {
@@ -40,6 +40,7 @@ public class Entity {
 
     public void addGroup(int mGroup) {
         groupBitSet.set(mGroup, true);
+        manager.addToGroup(this, mGroup);
     }
     public void delGroup(int mGroup) {
         groupBitSet.set(mGroup, false);
@@ -55,10 +56,9 @@ public class Entity {
     public void addComponent(Component component) {
         if(!hasComponent(component)) {
             components.add(component);
-            componentID.put(component.getClass().getName(), componentIndex);
-            componentBitSet.set(componentIndex, true);
-            componentIndex++;
-            components.get(components.size() - 1).init();
+            componentID.put(component.getClass().getName(), components.size() - 1);
+            componentBitSet.set(components.size() - 1, true);
+            //components.get(components.size() - 1).init();
         }
     }
 

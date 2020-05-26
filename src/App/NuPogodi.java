@@ -18,17 +18,12 @@ public class NuPogodi {
 
     public void init() {
         manager = new Manager();
-        player = new Entity();
-
-        player.addComponent(new TestComponent());
-        player.getComponent(new TestComponent()).a = 20;
-        System.out.println(player.getComponent(new TestComponent()).a);
-
-
-        //System.out.println(groupLabels.groupColliders.ordinal());
+        player = manager.addEntity();
+        obj = manager.addEntity();
+        
     }
 
     public void update() {
-        obj.getComponent(new AnotherTestComponent()).update();
+        obj.update();
     }
 }
