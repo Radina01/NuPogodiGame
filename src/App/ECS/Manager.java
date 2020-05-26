@@ -32,5 +32,14 @@ public class Manager {
         return entity;
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    public List<Entity> getEntities() {
+        return entities;
+    }
+
+    public HashMap<Integer, ArrayList<Entity>> getGroupedEntities() {
+        return groupedEntities;
+    }
 }

@@ -34,13 +34,15 @@ public class Entity {
         for (int i = 0; i < components.size(); i++) components.get(i).draw();
     }
 
-/*    public boolean hasGroup(int mGroup) {
+    public boolean hasGroup(int mGroup) {
         return groupBitSet.get(mGroup);
-    }*/
+    }
 
     public void addGroup(int mGroup) {
-        groupBitSet.set(mGroup, true);
-        manager.addToGroup(this, mGroup);
+        if(!hasGroup(mGroup)) {
+            groupBitSet.set(mGroup, true);
+            manager.addToGroup(this, mGroup);
+        }
     }
     /*
     public void delGroup(int mGroup) {
