@@ -6,5 +6,19 @@ public class Main {
 
         nuPogodi.init();
 
+        while(true) {
+            delay(20);
+            nuPogodi.update();
+            nuPogodi.render();
+        }
+
+    }
+
+    private static void delay(final int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
     }
 }
