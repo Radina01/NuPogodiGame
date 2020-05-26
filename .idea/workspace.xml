@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/RecordsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/PageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/PageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
