@@ -44,4 +44,8 @@ public class TextureManager extends JComponent {
 
         animationThread.start();
     }
+
+    public void paintRect() {
+
+    }
 }
