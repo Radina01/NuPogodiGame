@@ -8,8 +8,8 @@ import java.util.List;
 public class Entity {
 
     private Manager manager;
-    private final byte MAX_COMPONENTS = 32;
-    private final byte MAX_GROUPS = 32;
+    private final byte MAX_COMPONENTS = 12;
+    private final byte MAX_GROUPS = 12;
     private List<Component> components = new ArrayList<>(MAX_COMPONENTS);
     private BitSet groupBitSet = new BitSet(MAX_GROUPS);
     private BitSet componentBitSet = new BitSet(MAX_COMPONENTS);
@@ -34,17 +34,18 @@ public class Entity {
         for (int i = 0; i < components.size(); i++) components.get(i).draw();
     }
 
-    public boolean hasGroup(int mGroup) {
+/*    public boolean hasGroup(int mGroup) {
         return groupBitSet.get(mGroup);
-    }
+    }*/
 
     public void addGroup(int mGroup) {
         groupBitSet.set(mGroup, true);
         manager.addToGroup(this, mGroup);
     }
+    /*
     public void delGroup(int mGroup) {
         groupBitSet.set(mGroup, false);
-    }
+    }*/
 
     public boolean hasComponent(Component component) {
 
@@ -58,7 +59,7 @@ public class Entity {
             components.add(component);
             componentID.put(component.getClass().getName(), components.size() - 1);
             componentBitSet.set(components.size() - 1, true);
-            //components.get(components.size() - 1).init();
+            components.get(components.size() - 1).init();
         }
     }
 
@@ -67,5 +68,30 @@ public class Entity {
         return null;
     }
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    public List<Component> getComponents() {
+        return components;
+    }
+
+    public BitSet getGroupBitSet() {
+        return groupBitSet;
+    }
+
+    public BitSet getComponentBitSet() {
+        return componentBitSet;
+    }
+
+    public HashMap<String, Integer> getComponentID() {
+        return componentID;
+    }
+
+    public byte getMAX_COMPONENTS() {
+        return MAX_COMPONENTS;
+    }
+
+    public byte getMAX_GROUPS() {
+        return MAX_GROUPS;
+    }
 }

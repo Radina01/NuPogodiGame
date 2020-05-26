@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Manager {
 
-    public List<Entity> entities = new ArrayList<>();
+    private List<Entity> entities = new ArrayList<>();
     private HashMap<Integer, ArrayList<Entity>> groupedEntities = new HashMap<>();
 
     public void update() {

@@ -20,7 +20,7 @@ public class NuPogodi {
         manager = new Manager();
         player = manager.addEntity();
         obj = manager.addEntity();
-        
+
     }
 
     public void update() {
