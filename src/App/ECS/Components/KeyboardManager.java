@@ -3,15 +3,8 @@ package App.ECS.Components;
 import App.Display;
 import App.ECS.Component;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
-import static com.sun.glass.ui.Cursor.setVisible;
-import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
 
 public class KeyboardManager extends Component {
 

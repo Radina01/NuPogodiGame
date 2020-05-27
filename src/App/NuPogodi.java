@@ -20,6 +20,14 @@ public class NuPogodi {
         manager = new Manager();
         player = manager.addEntity();
 
+        for (int i = 0; i < 4; i++) {
+            Entity e = manager.addEntity();
+            e.addComponent(new TransformComponent());
+            e.getComponent(new TransformComponent()).setPosition(i);
+            e.addComponent(new EggComponent(e.getComponent(new TransformComponent())));
+
+        }
+
         player.addComponent(new TransformComponent());
         player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png"));
         player.addComponent(new KeyboardManager(player.getComponent(new SpriteComponent())));

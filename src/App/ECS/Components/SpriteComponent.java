@@ -9,7 +9,6 @@ public class SpriteComponent extends Component {
     private TransformComponent transform;
     private String path;
     private TextureManager texture;
-    private int position;
     private int lastPosition;
 
     public SpriteComponent() {}
@@ -22,8 +21,6 @@ public class SpriteComponent extends Component {
         transform.setY(Display.getInstance().getHeight() - 50 - transform.getHeight());
         this.path = path;
         texture = new TextureManager(transform.getX(), transform.getY(), transform.getWidth(), transform.getHeight(), path, false, true, 32);
-        Display.getInstance().addGraphic(texture);
-        position = 0;
     }
 
     @Override
@@ -31,9 +28,8 @@ public class SpriteComponent extends Component {
 
     @Override
     public void update() {
-        if(position != lastPosition) {
-            System.out.println(position);
-            switch (position) {
+        if(transform.getPosition() != lastPosition) {
+            switch (transform.getPosition()) {
                 case 0: {
                     texture.setFlip(false);
                     texture.setAnimationXPosition(1);
@@ -55,7 +51,7 @@ public class SpriteComponent extends Component {
                     break;
                 }
             }
-            lastPosition = position;
+            lastPosition = transform.getPosition();
         }
     }
 
@@ -65,6 +61,6 @@ public class SpriteComponent extends Component {
     }
 
     public void setPosition(int position) {
-        this.position = position;
+        transform.setPosition(position);
     }
 }

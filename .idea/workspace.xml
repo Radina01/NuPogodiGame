@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/ColliderComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
     </list>
@@ -189,10 +199,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1590488698625" />
-    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1590572438054">
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1590582673326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590572438054" />
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590582673326" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590491363170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -201,22 +211,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
-    <state width="1322" height="172" key="GridCell.Tab.0.bottom" timestamp="1590573538128">
+    <state width="1322" height="172" key="GridCell.Tab.0.bottom" timestamp="1590583768336">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590573538128" />
-    <state width="1322" height="172" key="GridCell.Tab.0.center" timestamp="1590573538128">
+    <state width="1322" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590583768336" />
+    <state width="1322" height="172" key="GridCell.Tab.0.center" timestamp="1590583768335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590573538128" />
-    <state width="1322" height="172" key="GridCell.Tab.0.left" timestamp="1590573538127">
+    <state width="1322" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590583768335" />
+    <state width="1322" height="172" key="GridCell.Tab.0.left" timestamp="1590583768335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590573538127" />
-    <state width="1322" height="172" key="GridCell.Tab.0.right" timestamp="1590573538128">
+    <state width="1322" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590583768335" />
+    <state width="1322" height="172" key="GridCell.Tab.0.right" timestamp="1590583768336">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590573538128" />
+    <state width="1322" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590583768336" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -233,10 +243,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590150070360" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1590482422117">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1590580208306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590482422117" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590580208306" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

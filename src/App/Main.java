@@ -7,7 +7,7 @@ public class Main {
         nuPogodi.init();
 
         while(true) {
-            delay(20);
+            delay(30);
             nuPogodi.update();
             nuPogodi.render();
         }

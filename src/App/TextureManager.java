@@ -30,6 +30,7 @@ public class TextureManager extends JComponent {
         this.path = path;
         this.flip = flip;
         this.animated = false;
+        Display.getInstance().addGraphic(this);
     }
 
     public TextureManager(int x, int y, int width, int height, String path, boolean flip, boolean isAnimated, int size) {
@@ -41,6 +42,7 @@ public class TextureManager extends JComponent {
         this.flip = flip;
         this.animated = isAnimated;
         spriteSize = size;
+        Display.getInstance().addGraphic(this);
     }
 
     @Override
@@ -87,7 +89,6 @@ public class TextureManager extends JComponent {
 
     public void setAnimationXPosition(int animationXPosition) {
         this.animationXPosition = animationXPosition;
-        System.out.println(animationXPosition);
     }
 
     public void setAnimationYPosition(int animationYPosition) {

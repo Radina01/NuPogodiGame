@@ -9,8 +9,13 @@ public class TransformComponent extends Component {
     private int y;
     private int width;
     private int height;
+    private float velX = 0;
+    private float velY = 0;
+    private float speed = 0.5f;
+    private int position = 0;
 
-    public TransformComponent() {}
+    public TransformComponent() {
+    }
 
     public TransformComponent(int x, int y, int width, int height) {
         this.x = x;
@@ -26,10 +31,13 @@ public class TransformComponent extends Component {
 
     @Override
     public void update() {
+        x += velX * speed;
+        y += velY * speed;
     }
 
     @Override
-    public void draw() {}
+    public void draw() {
+    }
 
     public int getX() {
         return x;
@@ -61,5 +69,37 @@ public class TransformComponent extends Component {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public void setVelX(float velX) {
+        this.velX = velX;
+    }
+
+    public void setVelY(float velY) {
+        this.velY = velY;
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public float getVelX() {
+        return velX;
+    }
+
+    public float getVelY() {
+        return velY;
     }
 }
