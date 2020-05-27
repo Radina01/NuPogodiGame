@@ -7,19 +7,19 @@ import App.TextureManager;
 public class SpriteComponent extends Component {
 
     private TransformComponent transform;
-    private int width;
-    private int height;
     private String path;
     private TextureManager texture;
 
     public SpriteComponent() {}
 
-    public SpriteComponent(TransformComponent transformComponent, int width, int height, final String path) {
+    public SpriteComponent(TransformComponent transformComponent, final String path) {
         transform = transformComponent;
-        this.width = width;
-        this.height = height;
+        transform.setWidth(Display.getInstance().getWidth()/3);
+        transform.setHeight(Display.getInstance().getHeight()/3);
+        transform.setX(Display.getInstance().getWidth() / 2 - transform.getWidth() / 2);
+        transform.setY(Display.getInstance().getHeight() - 50 - transform.getHeight());
         this.path = path;
-        texture = new TextureManager(transform.getX(), transform.getY(), width, height, path);
+        texture = new TextureManager(transform.getX(), transform.getY(), transform.getWidth(), transform.getHeight(), path);
         Display.getInstance().addGraphic(texture);
     }
 

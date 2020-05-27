@@ -1,9 +1,6 @@
 package App;
 
-import App.ECS.Components.AnotherTestComponent;
-import App.ECS.Components.SpriteComponent;
-import App.ECS.Components.TestComponent;
-import App.ECS.Components.TransformComponent;
+import App.ECS.Components.*;
 import App.ECS.Entity;
 import App.ECS.Manager;
 
@@ -24,7 +21,8 @@ public class NuPogodi {
         player = manager.addEntity();
 
         player.addComponent(new TransformComponent());
-        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), 50, 50, "assets\\sprite1.png"));
+        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\sprite1.png"));
+        player.addComponent(new KeyboardManager());
 
 
     }
