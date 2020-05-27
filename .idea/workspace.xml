@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/ColliderComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Rect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,22 +210,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
-    <state width="1322" height="172" key="GridCell.Tab.0.bottom" timestamp="1590583768336">
+    <state width="1322" height="139" key="GridCell.Tab.0.bottom" timestamp="1590591549765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590583768336" />
-    <state width="1322" height="172" key="GridCell.Tab.0.center" timestamp="1590583768335">
+    <state width="1322" height="139" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590591549765" />
+    <state width="1322" height="139" key="GridCell.Tab.0.center" timestamp="1590591549764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590583768335" />
-    <state width="1322" height="172" key="GridCell.Tab.0.left" timestamp="1590583768335">
+    <state width="1322" height="139" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590591549764" />
+    <state width="1322" height="139" key="GridCell.Tab.0.left" timestamp="1590591549764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590583768335" />
-    <state width="1322" height="172" key="GridCell.Tab.0.right" timestamp="1590583768336">
+    <state width="1322" height="139" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590591549764" />
+    <state width="1322" height="139" key="GridCell.Tab.0.right" timestamp="1590591549765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590583768336" />
+    <state width="1322" height="139" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590591549765" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -260,6 +259,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NuPogodi$ManagerTest.ic" NAME="ManagerTest Coverage Results" MODIFIED="1590495227513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>App.ECS.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NuPogodi$Main.ic" NAME="Main Coverage Results" MODIFIED="1590591534511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>App.*</FILTER>
     </SUITE>
   </component>
 </project>

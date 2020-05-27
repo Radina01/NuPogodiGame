@@ -22,16 +22,12 @@ public class KeyboardManager extends Component {
             switch (e.getID()) {
                 case KeyEvent.KEY_PRESSED : {
                     if(e.getKeyCode() == KeyEvent.VK_E) {
-                        spriteComponent.setPosition(0);
                     }
                     if(e.getKeyCode() == KeyEvent.VK_Q) {
-                        spriteComponent.setPosition(1);
                     }
                     if(e.getKeyCode() == KeyEvent.VK_A) {
-                        spriteComponent.setPosition(2);
                     }
                     if(e.getKeyCode() == KeyEvent.VK_D) {
-                        spriteComponent.setPosition(3);
                     }
                 }
             }

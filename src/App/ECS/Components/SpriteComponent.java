@@ -4,6 +4,8 @@ import App.Display;
 import App.ECS.Component;
 import App.TextureManager;
 
+import java.util.HashMap;
+
 public class SpriteComponent extends Component {
 
     private TransformComponent transform;
@@ -11,16 +13,31 @@ public class SpriteComponent extends Component {
     private TextureManager texture;
     private int lastPosition;
 
+    public HashMap<String, Animation> animations = new HashMap<>();
+
+    private boolean animated = false;
+    private int frames = 0;
+    private int speed = 100;
+    public int animIndex = 0;
+
     public SpriteComponent() {}
 
-    public SpriteComponent(TransformComponent transformComponent, final String path) {
+    public SpriteComponent(TransformComponent transformComponent, final String path, boolean isAnimated) {
+        animated = isAnimated;
+
+        Animation one = new Animation(0, 1, 1);
+        Animation two = new Animation(1, 1, 1);
+        Animation three = new Animation(3, 1, 1);
+        Animation four = new Animation(4, 1, 1);
+
+        animations.put("one", one);
+        animations.put("two", two);
+        animations.put("three", three);
+        animations.put("four", four);
+
         transform = transformComponent;
-        transform.setWidth(Display.getInstance().getWidth()/3);
-        transform.setHeight(Display.getInstance().getHeight()/3);
-        transform.setX(Display.getInstance().getWidth() / 2 - transform.getWidth() / 2);
-        transform.setY(Display.getInstance().getHeight() - 50 - transform.getHeight());
         this.path = path;
-        texture = new TextureManager(transform.getX(), transform.getY(), transform.getWidth(), transform.getHeight(), path, false, true, 32);
+        texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, 32);
     }
 
     @Override
@@ -28,31 +45,6 @@ public class SpriteComponent extends Component {
 
     @Override
     public void update() {
-        if(transform.getPosition() != lastPosition) {
-            switch (transform.getPosition()) {
-                case 0: {
-                    texture.setFlip(false);
-                    texture.setAnimationXPosition(1);
-                    break;
-                }
-                case 1: {
-                    texture.setFlip(true);
-                    texture.setAnimationXPosition(1);
-                    break;
-                }
-                case 2: {
-                    texture.setFlip(true);
-                    texture.setAnimationXPosition(0);
-                    break;
-                }
-                case 3: {
-                    texture.setFlip(false);
-                    texture.setAnimationXPosition(0);
-                    break;
-                }
-            }
-            lastPosition = transform.getPosition();
-        }
     }
 
     @Override
@@ -60,7 +52,23 @@ public class SpriteComponent extends Component {
         texture.render();
     }
 
-    public void setPosition(int position) {
-        transform.setPosition(position);
+    public void Play(final String animName) {
+        frames = animations.get(animName).frames;
+        animIndex = animations.get(animName).index;
+        speed = animations.get(animName).speed;
+
+    }
+}
+
+
+class Animation {
+    int index;
+    int frames;
+    int speed;
+    Animation() {}
+    Animation(int i, int f, int s) {
+        index = i;
+        frames = f;
+        speed = s;
     }
 }

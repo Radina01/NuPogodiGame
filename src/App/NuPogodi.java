@@ -18,18 +18,22 @@ public class NuPogodi {
     public void init() {
         Display.initInstance(600, 600, "Nu Pogodi");
         manager = new Manager();
+
+        int width = Display.getInstance().getWidth()/3;
+        int height = Display.getInstance().getHeight()/3;
+        int x = Display.getInstance().getWidth() / 2 - width / 2;
+        int y = Display.getInstance().getHeight() - 50 - height;
         player = manager.addEntity();
 
         for (int i = 0; i < 4; i++) {
             Entity e = manager.addEntity();
             e.addComponent(new TransformComponent());
-            e.getComponent(new TransformComponent()).setPosition(i);
             e.addComponent(new EggComponent(e.getComponent(new TransformComponent())));
 
         }
 
-        player.addComponent(new TransformComponent());
-        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png"));
+        player.addComponent(new TransformComponent(x, y, width, height));
+        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png", true));
         player.addComponent(new KeyboardManager(player.getComponent(new SpriteComponent())));
 
 
