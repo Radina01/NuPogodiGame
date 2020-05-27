@@ -21,8 +21,8 @@ public class NuPogodi {
         player = manager.addEntity();
 
         player.addComponent(new TransformComponent());
-        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\sprite1.png"));
-        player.addComponent(new KeyboardManager());
+        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png"));
+        player.addComponent(new KeyboardManager(player.getComponent(new SpriteComponent())));
 
 
     }

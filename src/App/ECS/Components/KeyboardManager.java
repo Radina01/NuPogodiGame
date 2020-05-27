@@ -15,16 +15,30 @@ import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
 
 public class KeyboardManager extends Component {
 
+    private SpriteComponent spriteComponent;
 
     public KeyboardManager() {}
+
+    public KeyboardManager(SpriteComponent spriteComponent) {
+        this.spriteComponent = spriteComponent;
+    }
 
     KeyEventDispatcher keyEventDispatcher = new KeyEventDispatcher() {
         @Override
         public boolean dispatchKeyEvent(KeyEvent e) {
             switch (e.getID()) {
                 case KeyEvent.KEY_PRESSED : {
-                    if(e.getKeyCode() == KeyEvent.VK_W) {
-                        System.out.println("asd");
+                    if(e.getKeyCode() == KeyEvent.VK_E) {
+                        spriteComponent.setPosition(0);
+                    }
+                    if(e.getKeyCode() == KeyEvent.VK_Q) {
+                        spriteComponent.setPosition(1);
+                    }
+                    if(e.getKeyCode() == KeyEvent.VK_A) {
+                        spriteComponent.setPosition(2);
+                    }
+                    if(e.getKeyCode() == KeyEvent.VK_D) {
+                        spriteComponent.setPosition(3);
                     }
                 }
             }
