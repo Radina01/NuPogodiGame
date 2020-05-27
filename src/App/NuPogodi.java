@@ -33,7 +33,7 @@ public class NuPogodi {
         }
 
         player.addComponent(new TransformComponent(x, y, width, height));
-        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png", true));
+        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png"));
         player.addComponent(new KeyboardManager(player.getComponent(new SpriteComponent())));
 
 

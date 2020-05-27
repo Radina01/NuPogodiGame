@@ -37,6 +37,10 @@ public class TransformComponent extends Component {
         return position;
     }
 
+    public void setPosition(Rect position) {
+        this.position = position;
+    }
+
     public void setX(int x) {
         position.x = x;
     }
