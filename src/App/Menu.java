@@ -37,11 +37,11 @@ class PageManager {
     }
 
     public void initPlayState() {
-        //Display.initInstance(600, 600, "Nu Pogodi");
-        //playState.addGraphic(
-          //      new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
-        //);
-        playState.addJTextArea();
+       //Display.initInstance(600, 600, "Nu Pogodi");
+        playState.addGraphic(
+        new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
+        );
+        playState.addJTextArea(100, 100, 100, 50);
     }
 
     public void initScoreListState() {
@@ -107,6 +107,7 @@ public class Menu {
 
 class Page {
 
+
     List<JComponent> componentList = new ArrayList<>();
 
     public void addButton(int x, int y, int width, int height, String name) {
@@ -129,18 +130,11 @@ class Page {
         componentList.add(new Rect());
     }
 
-
-    public void addJTextArea() {
-        JTextArea textArea = new JTextArea(1, 2);
-        JScrollPane areaScrollPane = new JScrollPane(textArea);
-        areaScrollPane.setVerticalScrollBarPolicy(
-                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        areaScrollPane.setPreferredSize(new Dimension(250, 250));
-        textArea.setEditable(false);
-        textArea.setCaretPosition(textArea.getDocument().getLength());
+    public void addJTextArea(int x, int y, int width, int height) {
+        TextField textField = new TextField();
+        componentList.add(textField.setTextField(x, y, width, height));
+        textField.actionPerformed();
     }
-
-    public
 }
 
 class Rect extends JComponent {
