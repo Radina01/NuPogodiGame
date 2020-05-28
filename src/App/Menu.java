@@ -19,24 +19,41 @@ class PageManager {
     private int X_BUTTON_COORDINATE = Display.getInstance().width / 3;
 
     public void initMenuState() {
-        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height / 8 + 30, X_BUTTON_COORDINATE, Display.getInstance().height / 8, "Play");
-        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height / 8 * 2 + 30, X_BUTTON_COORDINATE, Display.getInstance().height / 8, "Records");
-        menuState.addButton(X_BUTTON_COORDINATE, Display.getInstance().height / 8 * 3 + 30, X_BUTTON_COORDINATE, Display.getInstance().height / 8, "Exit");
+        menuState.addButton(X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8 + 30,
+                X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8,
+                "Play");
+        menuState.addButton(X_BUTTON_COORDINATE,
+                ((Display.getInstance().height / 8) * 2) + 30,
+                X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8,
+                "Records");
+        menuState.addButton(X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8 * 3 + 30,
+                X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8,
+                "Exit");
     }
 
     public void initPlayState() {
         //Display.initInstance(600, 600, "Nu Pogodi");
-        playState.addGraphic(
-                new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
-        );
+        //playState.addGraphic(
+          //      new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
+        //);
+        playState.addJTextArea();
     }
 
     public void initScoreListState() {
         scoreListState.addRect();
         scoreListState.addRect();
         scoreListState.addRect();
+        scoreListState.addButton(X_BUTTON_COORDINATE * 2 - 20,
+                Display.getInstance().height / 2 + 180,
+                X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8,
+                "Menu");
     }
-
 }
 
 public class Menu {
@@ -53,6 +70,7 @@ public class Menu {
         Display.getInstance().changePage(pageManager.emptyPage);
         switch (PageManager.gameState) {
             case menu:
+                Display.getInstance().changePage(pageManager.menuState);
                 break;
             case play:
                 Display.getInstance().changePage(pageManager.playState);
@@ -70,6 +88,9 @@ public class Menu {
 
     public static void buttonFunction(String name) {
         switch (name) {
+            case "Menu":
+                PageManager.gameState = GameState.menu;
+                break;
             case "Play":
                 PageManager.gameState = GameState.play;
                 break;
@@ -107,6 +128,19 @@ class Page {
     public void addRect() {
         componentList.add(new Rect());
     }
+
+
+    public void addJTextArea() {
+        JTextArea textArea = new JTextArea(1, 2);
+        JScrollPane areaScrollPane = new JScrollPane(textArea);
+        areaScrollPane.setVerticalScrollBarPolicy(
+                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        areaScrollPane.setPreferredSize(new Dimension(250, 250));
+        textArea.setEditable(false);
+        textArea.setCaretPosition(textArea.getDocument().getLength());
+    }
+
+    public
 }
 
 class Rect extends JComponent {
@@ -126,6 +160,8 @@ class Rect extends JComponent {
         graph.setColor(Color.LIGHT_GRAY);
         graph.fillRect(x, y, width, height);
         graph.setColor(Color.BLACK);
-        graph.drawString("PESHO", (x + width)/2, y + height/2);
+        graph.drawString("PESHO", (x + width) / 2 - 50, y + height / 2);
+        graph.drawString("GOSHO", (x + width) - 100, (y + height / 2));
+
     }
 }
