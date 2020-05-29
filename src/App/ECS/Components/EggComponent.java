@@ -21,8 +21,8 @@ public class EggComponent extends Component {
 
     public EggComponent(TransformComponent transformComponent, PositionComponent position) {
         transform = transformComponent;
-        transform.setWidth(150);
-        transform.setHeight(150);
+        transform.setWidth(30);
+        transform.setHeight(30);
         this.position = position;
     }
 
@@ -39,7 +39,7 @@ public class EggComponent extends Component {
             case 1:
             case 3: {
                 transform.setX(t.getPosition().x + t.getPosition().width);
-                transform.setY(t.getPosition().y + t.getPosition().height);
+                transform.setY(t.getPosition().y);
                 transform.setVelX(-1);
                 transform.setVelY(1);
                 break;
@@ -47,7 +47,7 @@ public class EggComponent extends Component {
             case 0:
             case 2: {
                 transform.setX(t.getPosition().x);
-                transform.setY(t.getPosition().y + t.getPosition().height);
+                transform.setY(t.getPosition().y);
                 transform.setVelX(1);
                 transform.setVelY(1);
                 break;
@@ -88,5 +88,7 @@ public class EggComponent extends Component {
     public void draw() {
     }
 
-
+    public boolean isDropped() {
+        return dropped;
+    }
 }

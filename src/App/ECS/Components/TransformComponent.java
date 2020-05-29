@@ -1,6 +1,5 @@
 package App.ECS.Components;
 
-import App.Display;
 import App.ECS.Component;
 import App.Rect;
 

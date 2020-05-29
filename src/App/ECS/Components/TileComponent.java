@@ -16,7 +16,7 @@ public class TileComponent extends Component {
     public TileComponent(int x, int y, int srcX, int srcY, int size, int tscale, final String path) {
         position = new Rect(x, y, size * tscale, size * tscale);
         texture = new TextureManager(x, y, size * tscale, path, srcX, srcY);
-        Display.getInstance().addGraphic(texture);
+        Display.getInstance().addGraphicToMap(texture);
     }
 
     @Override

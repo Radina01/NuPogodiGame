@@ -4,13 +4,15 @@ import App.ECS.Components.*;
 import App.ECS.Entity;
 import App.ECS.Manager;
 
+import java.util.Calendar;
+
 public class NuPogodi {
 
     public static Manager manager;
     private Map map;
-    private Entity[] eggs = new Entity[20];
     Entity player;
-    Entity obj;
+    private long time = Calendar.getInstance().getTimeInMillis();
+
     public enum groupLabels {
         groupStartPosition,
         groupCatchPosition,
@@ -31,12 +33,18 @@ public class NuPogodi {
         int playerX = (Display.getInstance().getWidth() - size) / 2;
         int playerY = Display.getInstance().getHeight() - size - 64;
 
+        initPlayer(size, playerX, playerY);
+        for (int i = 0; i < 20; i++) createEgg();
 
-        player.addComponent(new TransformComponent(playerX, playerY, size,size));
+        Display.getInstance().printAllGraphics();
+    }
+
+    private void initPlayer(int size, int x, int y) {
+        player.addComponent(new TransformComponent(x, y, size,size));
         player.addComponent(new PositionComponent());
         player.addComponent(new SpriteComponent(
                 player.getComponent(new TransformComponent()),
-                "assets\\sprite.png"
+                "assets\\sprite.png", 200
         ));
         player.addComponent(new ColliderComponent());
         player.addComponent(new KeyboardManager(
@@ -44,50 +52,26 @@ public class NuPogodi {
                 player.getComponent(new PositionComponent()),
                 player.getComponent(new ColliderComponent())
         ));
+        player.addComponent(new LiveComponent());
+        player.addGroup(groupLabels.groupPlayer.ordinal());
+    }
 
-/*
-        System.out.println(manager.getGroup(groupLabels.groupStartPosition.ordinal()).size());
-        for (Entity e: manager.getGroup(groupLabels.groupStartPosition.ordinal())) {
-            System.out.println(e.getComponent(new TransformComponent()).getPosition().x + " " + e.getComponent(new TransformComponent()).getPosition().y);
-        }*/
-
-        for (int i = 0; i < 20; i++) {
-            eggs[i] = manager.addEntity();
-            eggs[i].addComponent(new TransformComponent());
-            eggs[i].addComponent(new PositionComponent());
-            eggs[i].addComponent(new EggComponent(
-                    eggs[i].getComponent(new TransformComponent()),
-                    eggs[i].getComponent(new PositionComponent())
-            ));
-            eggs[i].getComponent(new EggComponent()).drop();
-            eggs[i].addComponent(new SpriteComponent(
-                    eggs[i].getComponent(new TransformComponent()),
-                    "assets/sprite1.png"
-            ));
-            eggs[i].addComponent(new ColliderComponent(
-                    eggs[i].getComponent(new TransformComponent()).getPosition()
-            ));
-            eggs[i].addGroup(groupLabels.groupColliders.ordinal());
-        }
-/*
-        int width = Display.getInstance().getWidth()/3;
-        int height = Display.getInstance().getHeight()/3;
-        int x = Display.getInstance().getWidth() / 2 - width / 2;
-        int y = Display.getInstance().getHeight() - 50 - height;
-        player = manager.addEntity();
-
-        for (int i = 0; i < 4; i++) {
-            Entity e = manager.addEntity();
-            e.addComponent(new TransformComponent());
-            e.addComponent(new EggComponent(e.getComponent(new TransformComponent())));
-
-        }
-
-        player.addComponent(new TransformComponent(x, y, width, height));
-        player.addComponent(new SpriteComponent(player.getComponent(new TransformComponent()), "assets\\spritean1.png"));
-        player.addComponent(new KeyboardManager(player.getComponent(new SpriteComponent())));
-
-*/
+    private void createEgg() {
+        Entity eggs = manager.addEntity();
+        eggs.addComponent(new TransformComponent());
+        eggs.addComponent(new PositionComponent());
+        eggs.addComponent(new EggComponent(
+                eggs.getComponent(new TransformComponent()),
+                eggs.getComponent(new PositionComponent())
+        ));
+        eggs.addComponent(new SpriteComponent(
+                eggs.getComponent(new TransformComponent()),
+                "assets\\images.png", 186
+        ));
+        eggs.addComponent(new ColliderComponent(
+                eggs.getComponent(new TransformComponent()).getPosition()
+        ));
+        eggs.addGroup(groupLabels.groupColliders.ordinal());
     }
 
     public void update() {
@@ -98,6 +82,21 @@ public class NuPogodi {
                 System.out.println("true");
             }
         }
+
+
+        if (Calendar.getInstance().getTimeInMillis() - time >= 1000) {
+            if((int)(Math.random() * 2) == 1) {
+                for (Entity e: manager.getGroup(groupLabels.groupColliders.ordinal())) {
+                    if(!e.getComponent(new EggComponent()).isDropped()) {
+                        e.getComponent(new EggComponent()).drop();
+                        break;
+                    }
+                }
+            }
+            time = Calendar.getInstance().getTimeInMillis();
+
+        }
+
     }
 
     public void render() {

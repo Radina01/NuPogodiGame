@@ -36,7 +36,7 @@ public class Map {
             for (int i = 0; i < sizeY; i++) {
                 line = reader.readLine();
                 for (int j = 0; j < sizeX; j++) {
-                    //addTile(a % 10, a/10, j*scaledSize, i * scaledSize);
+                    addTile(a % 10, a/10, j*scaledSize, i * scaledSize);
                     a++;
                 }
             }

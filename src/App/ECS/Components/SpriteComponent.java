@@ -13,10 +13,10 @@ public class SpriteComponent extends Component {
 
     public SpriteComponent() {}
 
-    public SpriteComponent(TransformComponent transformComponent, final String path) {
+    public SpriteComponent(TransformComponent transformComponent, final String path, int size) {
         transform = transformComponent;
         this.path = path;
-        texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, 200);
+        texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, size);
         Display.getInstance().addGraphic(texture);
     }
 
