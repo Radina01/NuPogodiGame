@@ -2,31 +2,67 @@ package App.ECS.Components;
 
 import App.Display;
 import App.ECS.Component;
+import App.ECS.Entity;
+import App.NuPogodi;
 import App.TextureManager;
 
+import java.util.List;
 
 
 public class EggComponent extends Component {
 
     private TransformComponent transform;
-    private TextureManager texture;
+    private PositionComponent position;
+    private List<Entity> startPositions = NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupStartPosition.ordinal());
+    private final int DEFAULT_X = 5000;
+    private final int DEFAULT_Y = 5000;
 
     public EggComponent() {
     }
 
-    public EggComponent(TransformComponent transformComponent) {
+    public EggComponent(TransformComponent transformComponent, PositionComponent position) {
         transform = transformComponent;
+        transform.setWidth(50);
+        transform.setHeight(50);
+        this.position = position;
     }
 
     @Override
     public void init() {
-
-        //texture = new TextureManager(transform.getX(), transform.getY(), transform.getWidth(), transform.getHeight(), "assets\\sprite2.png", false);
+        remove();
     }
 
-    private void setUpTransformComponent(int xPos, int yPos) {
-
+    public void drop() {
+        position.setPosition((int)(Math.random() * 4));
+        TransformComponent t = startPositions.get(position.getPosition()).getComponent(new TransformComponent());
+        switch (position.getPosition()) {
+            case 0:
+            case 2: {
+                transform.setX(t.getPosition().x + t.getPosition().width);
+                transform.setY(t.getPosition().y + t.getPosition().height);
+                transform.setVelX(1);
+                transform.setVelY(1);
+                break;
+            }
+            case 1:
+            case 3: {
+                transform.setX(t.getPosition().x);
+                transform.setY(t.getPosition().y + t.getPosition().height);
+                transform.setVelX(-1);
+                transform.setVelY(1);
+                break;
+            }
+        }
+        //System.out.println(transform.getPosition().x + " " + transform.getPosition().y);
     }
+
+    public void remove() {
+        transform.setX(DEFAULT_X);
+        transform.setY(DEFAULT_Y);
+        transform.setVelX(0);
+        transform.setVelY(0);
+    }
+
 
     @Override
     public void update() {/*
@@ -50,4 +86,6 @@ public class EggComponent extends Component {
     @Override
     public void draw() {
     }
+
+
 }

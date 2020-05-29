@@ -1,4 +1,5 @@
 package App.ECS.Components;
+import App.Display;
 import App.ECS.Component;
 import App.TextureManager;
 
@@ -16,6 +17,7 @@ public class SpriteComponent extends Component {
         transform = transformComponent;
         this.path = path;
         texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, 32);
+        Display.getInstance().addGraphic(texture);
     }
 
     @Override
