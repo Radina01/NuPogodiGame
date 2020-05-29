@@ -1,10 +1,8 @@
 package App.ECS.Components;
 
-import App.Display;
 import App.ECS.Component;
 import App.ECS.Entity;
 import App.NuPogodi;
-import App.TextureManager;
 
 import java.util.List;
 
@@ -14,6 +12,7 @@ public class EggComponent extends Component {
     private TransformComponent transform;
     private PositionComponent position;
     private List<Entity> startPositions = NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupStartPosition.ordinal());
+    private boolean dropped = false;
     private final int DEFAULT_X = 5000;
     private final int DEFAULT_Y = 5000;
 
@@ -22,8 +21,8 @@ public class EggComponent extends Component {
 
     public EggComponent(TransformComponent transformComponent, PositionComponent position) {
         transform = transformComponent;
-        transform.setWidth(50);
-        transform.setHeight(50);
+        transform.setWidth(150);
+        transform.setHeight(150);
         this.position = position;
     }
 
@@ -33,22 +32,23 @@ public class EggComponent extends Component {
     }
 
     public void drop() {
+        dropped = true;
         position.setPosition((int)(Math.random() * 4));
         TransformComponent t = startPositions.get(position.getPosition()).getComponent(new TransformComponent());
         switch (position.getPosition()) {
-            case 0:
-            case 2: {
+            case 1:
+            case 3: {
                 transform.setX(t.getPosition().x + t.getPosition().width);
                 transform.setY(t.getPosition().y + t.getPosition().height);
-                transform.setVelX(1);
+                transform.setVelX(-1);
                 transform.setVelY(1);
                 break;
             }
-            case 1:
-            case 3: {
+            case 0:
+            case 2: {
                 transform.setX(t.getPosition().x);
                 transform.setY(t.getPosition().y + t.getPosition().height);
-                transform.setVelX(-1);
+                transform.setVelX(1);
                 transform.setVelY(1);
                 break;
             }
@@ -57,6 +57,7 @@ public class EggComponent extends Component {
     }
 
     public void remove() {
+        dropped = false;
         transform.setX(DEFAULT_X);
         transform.setY(DEFAULT_Y);
         transform.setVelX(0);

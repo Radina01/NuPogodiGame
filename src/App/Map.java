@@ -49,6 +49,10 @@ public class Map {
                         Entity entity = NuPogodi.manager.addEntity();
                         entity.addComponent(new TransformComponent(j * scaledSize, i * scaledSize, scaledSize, scaledSize));
                         entity.addGroup(NuPogodi.groupLabels.groupStartPosition.ordinal());
+                    } else if(words[j].equals("2")) {
+                        Entity entity = NuPogodi.manager.addEntity();
+                        entity.addComponent(new TransformComponent(j * scaledSize, i * scaledSize, scaledSize, scaledSize));
+                        entity.addGroup(NuPogodi.groupLabels.groupCatchPosition.ordinal());
                     }
                 }
             }

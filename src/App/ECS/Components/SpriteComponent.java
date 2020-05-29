@@ -16,7 +16,7 @@ public class SpriteComponent extends Component {
     public SpriteComponent(TransformComponent transformComponent, final String path) {
         transform = transformComponent;
         this.path = path;
-        texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, 32);
+        texture = new TextureManager(transform.getPosition().x, transform.getPosition().y, transform.getPosition().width, transform.getPosition().height, path, false, true, 200);
         Display.getInstance().addGraphic(texture);
     }
 
@@ -32,6 +32,12 @@ public class SpriteComponent extends Component {
     @Override
     public void draw() {
         texture.render();
+    }
+
+    public void changeAnimationFrame(int x, int y, boolean flip) {
+        texture.setAnimationXPosition(x);
+        texture.setAnimationYPosition(y);
+        texture.setFlip(flip);
     }
 
 }
