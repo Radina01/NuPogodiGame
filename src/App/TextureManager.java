@@ -13,7 +13,7 @@ public class TextureManager extends JComponent {
     private int width;
     private int height;
     private String path;
-    private boolean flip;
+    private boolean flip = false;
     private boolean animated;
     private int spriteSize;
     private int animationXPosition = 0;
@@ -30,7 +30,7 @@ public class TextureManager extends JComponent {
         this.path = path;
         this.flip = flip;
         this.animated = false;
-        Display.getInstance().addGraphic(this);
+        //Display.getInstance().addGraphic(this);
     }
 
     public TextureManager(int x, int y, int width, int height, String path, boolean flip, boolean isAnimated, int size) {
@@ -42,7 +42,20 @@ public class TextureManager extends JComponent {
         this.flip = flip;
         this.animated = isAnimated;
         spriteSize = size;
-        Display.getInstance().addGraphic(this);
+        //Display.getInstance().addGraphic(this);
+    }
+
+    public TextureManager(int x, int y, int size, String path, int srcX, int srcY) {
+        this.x = x;
+        this.y = y;
+        this.width = size;
+        this.height = size;
+        this.path = path;
+        this.animated = true;
+        spriteSize = size;
+        animationXPosition = srcX;
+        animationYPosition = srcY;
+        //Display.getInstance().addGraphic(this);
     }
 
     @Override
@@ -55,11 +68,13 @@ public class TextureManager extends JComponent {
         int animationX = animationXPosition * spriteSize;
         int animationY = animationYPosition * spriteSize;
 
-        if(animated) {
-            if(!flip) graph.drawImage(image, this.x, this.y, width + this.x, this.height + this.y, animationX, animationY, animationX + spriteSize, animationY + spriteSize, null);
-            else graph.drawImage(image, this.x + this.width, this.y, this.x, this.height + this.y, animationX, animationY, animationX + spriteSize, animationY + spriteSize, null);
+        if (animated) {
+            if (!flip)
+                graph.drawImage(image, this.x, this.y, width + this.x, this.height + this.y, animationX, animationY, animationX + spriteSize, animationY + spriteSize, null);
+            else
+                graph.drawImage(image, this.x + this.width, this.y, this.x, this.height + this.y, animationX, animationY, animationX + spriteSize, animationY + spriteSize, null);
         } else {
-            if(!flip) graph.drawImage(image, this.x, this.y, this.width, this.height, null);
+            if (!flip) graph.drawImage(image, this.x, this.y, this.width, this.height, null);
             else graph.drawImage(image, this.x + width, this.y, -this.width, this.height, null);
         }
 

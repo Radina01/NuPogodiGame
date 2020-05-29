@@ -1,12 +1,12 @@
 package App.ECS.Components;
 
 import App.ECS.Component;
-import App.TextureManager;
+import App.Rect;
+
 
 public class ColliderComponent extends Component {
 
-    private int x;
-    private int y;
+    private Rect rect = new Rect();
     TransformComponent transform;
 
 
