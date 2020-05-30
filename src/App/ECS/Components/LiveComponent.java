@@ -1,10 +1,8 @@
 package App.ECS.Components;
 
-import App.Display;
+import App.UI.Display;
 import App.ECS.Component;
-import App.TextureManager;
-
-import java.util.Calendar;
+import App.UI.TextureManager;
 
 public class LiveComponent extends Component {
 

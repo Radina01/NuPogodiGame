@@ -1,4 +1,4 @@
-package App;
+package App.UI;
 
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;

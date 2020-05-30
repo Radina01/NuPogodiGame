@@ -3,6 +3,8 @@ package App;
 import App.ECS.Components.*;
 import App.ECS.Entity;
 import App.ECS.Manager;
+import App.HelpClasses.Collide;
+import App.UI.Display;
 
 import java.util.Calendar;
 
@@ -12,7 +14,7 @@ public class NuPogodi {
     private Map map;
     Entity player;
     private long time = Calendar.getInstance().getTimeInMillis();
-    private int difficulty = 1000;
+    private int difficulty = 10000;
 
     public enum groupLabels {
         groupStartPosition,
@@ -79,11 +81,8 @@ public class NuPogodi {
 
     public void update() {
         manager.update();
-        for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
-            if (Collide.AABB(e.getComponent(new ColliderComponent()), player.getComponent(new ColliderComponent()))) {
-                e.getComponent(new EggComponent()).remove();
-            }
-        }
+
+        checkForCollide();
 
         dropEggs();
 
@@ -92,6 +91,7 @@ public class NuPogodi {
 
     private void dropEggs() {
         if (Calendar.getInstance().getTimeInMillis() - time >= difficulty) {
+            if(difficulty == 10000) difficulty = 1000;
             difficulty -= difficulty < 200 ? 0 : 2;
             System.out.println(difficulty);
             for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
@@ -102,6 +102,14 @@ public class NuPogodi {
             }
             time = Calendar.getInstance().getTimeInMillis();
 
+        }
+    }
+
+    private void checkForCollide() {
+        for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
+            if (Collide.AABB(e.getComponent(new ColliderComponent()), player.getComponent(new ColliderComponent()))) {
+                e.getComponent(new EggComponent()).remove();
+            }
         }
     }
 

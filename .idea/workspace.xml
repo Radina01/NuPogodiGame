@@ -2,15 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Collide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Display.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/ColliderComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/ColliderComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/LiveComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/LiveComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/ScoreComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/ScoreComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TileComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TileComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi$groupLabels.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi$groupLabels.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Rect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/TextureManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Collide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/HelpClasses/Collide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Display.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/ColliderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/ColliderComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TileComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TileComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/HelpClasses/Rect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/TextureManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +74,19 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="App.UI" />
+      <recent name="App.HelpClasses" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="NuPogodi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="App.*" />
+          <option name="PATTERN" value="App.HelpClasses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -197,6 +225,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590815487111" />
+    <state x="479" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590821915456">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590821915456" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590605437330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -205,22 +237,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590817716017" />
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590820177595">
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590822427466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
-    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590820177595">
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590822427466" />
+    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590822427466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
-    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590820177595">
+    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590822427466" />
+    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590822427466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
-    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590820177595">
+    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590822427466" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590822427466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590822427466" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

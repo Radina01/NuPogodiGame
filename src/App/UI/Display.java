@@ -1,7 +1,6 @@
-package App;
+package App.UI;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
@@ -77,5 +76,15 @@ public class Display {
 
     public int getHeight() {
         return height;
+    }
+
+    public void changePage(Page page) {
+        for (int i = 0; i < frame.getContentPane().getComponentCount(); i++) {
+            frame.getContentPane().remove(i);
+        }
+        for (int i = 0; i < page.componentList.size(); i++) {
+            frame.getContentPane().add(page.componentList.get(i));
+            frame.setVisible(true);
+        }
     }
 }

@@ -1,9 +1,9 @@
 package App.ECS.Components;
 
-import App.Display;
+import App.UI.Display;
 import App.ECS.Component;
-import App.Rect;
-import App.TextureManager;
+import App.HelpClasses.Rect;
+import App.UI.TextureManager;
 
 public class TileComponent extends Component {
 

@@ -1,7 +1,7 @@
 package App.ECS.Components;
 
 import App.ECS.Component;
-import App.Rect;
+import App.HelpClasses.Rect;
 
 
 public class ColliderComponent extends Component {

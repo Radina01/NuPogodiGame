@@ -1,7 +1,7 @@
 package App.ECS.Components;
-import App.Display;
+import App.UI.Display;
 import App.ECS.Component;
-import App.TextureManager;
+import App.UI.TextureManager;
 
 
 public class SpriteComponent extends Component {

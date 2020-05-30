@@ -1,11 +1,9 @@
 package App.ECS.Components;
 
-import App.Collide;
-import App.Display;
+import App.UI.Display;
 import App.ECS.Component;
 import App.ECS.Entity;
 import App.NuPogodi;
-import App.Rect;
 
 import java.util.List;
 

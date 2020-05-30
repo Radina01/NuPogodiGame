@@ -1,6 +1,7 @@
-package App;
+package App.HelpClasses;
 
 import App.ECS.Components.ColliderComponent;
+import App.HelpClasses.Rect;
 
 public class Collide {
 

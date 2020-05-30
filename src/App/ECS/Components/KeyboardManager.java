@@ -4,8 +4,7 @@ package App.ECS.Components;
 import App.ECS.Component;
 import App.ECS.Entity;
 import App.NuPogodi;
-import App.Rect;
-import App.TextureManager;
+import App.HelpClasses.Rect;
 
 import java.util.List;
 import java.awt.*;
@@ -58,6 +57,7 @@ public class KeyboardManager extends Component {
     @Override
     public void init() {
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(keyEventDispatcher);
+        position.setPosition(2);
     }
 
     @Override

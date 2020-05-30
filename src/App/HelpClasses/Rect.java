@@ -1,4 +1,4 @@
-package App;
+package App.HelpClasses;
 
 public class Rect {
 
