@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
     </list>
@@ -13,6 +18,12 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="183" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="NuPogodi" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,11 +43,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chess" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="NuPogodi" />
       <extension name="coverage">
@@ -49,23 +68,83 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+    <configuration name="ManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NuPogodi" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.ECS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="App.ECS" />
+      <option name="MAIN_CLASS_NAME" value="App.ECS.ManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerTest.testAreEntitiesFromGroupsLinked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NuPogodi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.ECS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="App.ECS" />
+      <option name="MAIN_CLASS_NAME" value="App.ECS.ManagerTest" />
+      <option name="METHOD_NAME" value="testAreEntitiesFromGroupsLinked" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerTest.testAreEntitiesFromGroupsLinkedTestByChangingEntitiesFromEntityObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NuPogodi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.ECS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="App.ECS" />
+      <option name="MAIN_CLASS_NAME" value="App.ECS.ManagerTest" />
+      <option name="METHOD_NAME" value="testAreEntitiesFromGroupsLinkedTestByChangingEntitiesFromEntityObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerTest.testIfOneEntityIsAddedToGroupMoreThanOnce" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NuPogodi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.ECS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="App.ECS" />
+      <option name="MAIN_CLASS_NAME" value="App.ECS.ManagerTest" />
+      <option name="METHOD_NAME" value="testIfOneEntityIsAddedToGroupMoreThanOnce" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.ManagerTest.testAreEntitiesFromGroupsLinked" />
+      <item itemvalue="JUnit.ManagerTest.testAreEntitiesFromGroupsLinkedTestByChangingEntitiesFromEntityObject" />
+      <item itemvalue="JUnit.ManagerTest.testIfOneEntityIsAddedToGroupMoreThanOnce" />
+      <item itemvalue="JUnit.ManagerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ManagerTest" />
+        <item itemvalue="JUnit.ManagerTest.testIfOneEntityIsAddedToGroupMoreThanOnce" />
+        <item itemvalue="JUnit.ManagerTest.testAreEntitiesFromGroupsLinkedTestByChangingEntitiesFromEntityObject" />
+        <item itemvalue="JUnit.ManagerTest.testAreEntitiesFromGroupsLinked" />
       </list>
     </recent_temporary>
   </component>
@@ -82,7 +161,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Dimo\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,30 +173,92 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589825671378">
+    <state x="275" y="21" key="#Project_Structure" timestamp="1589899317857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589825671378" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1589838726839">
+    <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1589899317857" />
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590488698625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589838726839" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1589838726819">
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1590488698625" />
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1590815487111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589838726819" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1589838726803">
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590815487111" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590605437330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589838726803" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1589838726820">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590605437330" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590058016718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589838726820" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1589878141377">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590816203978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589878141377" />
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590816203978">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590816203978">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590816203978">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589906551635" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1590810919678">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590810919678" />
+    <state x="387" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590486608854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1590486608854" />
+    <state x="65" y="0" key="new project wizard" timestamp="1590150070360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590150070360" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1590580208306">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590580208306" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="NuPogodi" type="b2602c69:ProjectViewProjectNode" />
+        <item name="NuPogodi" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NuPogodi$ManagerTest.ic" NAME="ManagerTest Coverage Results" MODIFIED="1590495227513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>App.ECS.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NuPogodi$Main.ic" NAME="Main Coverage Results" MODIFIED="1590591534511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>App.*</FILTER>
+    </SUITE>
   </component>
 </project>

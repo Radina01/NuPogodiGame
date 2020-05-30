@@ -1,13 +1,19 @@
 package App;
 
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Display {
 
     private static Display instance;
-    JFrame frame = new JFrame();
-    int width;
-    int height;
+    private JFrame frame = new JFrame();
+    private int width;
+    private int height;
+    private List<JComponent> mapLayer = new ArrayList<>();
+    private List<JComponent> gameLayer = new ArrayList<>();
 
     public static void initInstance(int widthSize, int heightSize, String name) {
         if(instance == null) {
@@ -23,6 +29,7 @@ public class Display {
         this.width = widthSize;
         this.height = heightSize;
 
+
         frame.setSize(widthSize, heightSize);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
@@ -32,14 +39,43 @@ public class Display {
 
     }
 
+    public void addGraphicToMap(TextureManager t) {
+        mapLayer.add(t);
+    }
+
     public void addGraphic(TextureManager t) {
-        frame.getContentPane().add(t);
+        gameLayer.add(t);
+    }
+
+    public void printAllGraphics() {
+        for (JComponent component : gameLayer) {
+            frame.getContentPane().add(component);
+            frame.setVisible(true);
+        }
+        for (JComponent component : mapLayer) {
+            frame.getContentPane().add(component);
+            frame.setVisible(true);
+        }
+    }
+
+    public void addComponent(JComponent component) {
+        frame.getContentPane().add(component);
         frame.setVisible(true);
+    }
+
+    public void addKeyListener(KeyListener listener) {
+        frame.getContentPane().addKeyListener(listener);
     }
 
     public void removeGraphic(int index) {
         frame.getContentPane().remove(index);
     }
 
+    public int getWidth() {
+        return width;
+    }
 
+    public int getHeight() {
+        return height;
+    }
 }
