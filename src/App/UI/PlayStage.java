@@ -1,4 +1,6 @@
 package App.UI;
 
-public class PlayStage {
+public class PlayStage extends Page {
+
+
 }

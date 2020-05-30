@@ -5,6 +5,7 @@ import App.ECS.Entity;
 import App.ECS.Manager;
 import App.HelpClasses.Collide;
 import App.UI.Display;
+import App.UI.Menu;
 
 import java.util.Calendar;
 
@@ -12,6 +13,8 @@ public class NuPogodi {
 
     public static Manager manager;
     private Map map;
+    private Menu menu;
+    public static boolean GamePlay = true;
     Entity player;
     private long time = Calendar.getInstance().getTimeInMillis();
     private int difficulty = 10000;
@@ -28,6 +31,9 @@ public class NuPogodi {
         Display.initInstance(780, 480, "Nu Pogodi");
         manager = new Manager();
         player = manager.addEntity();
+        //menu = new Menu();
+
+
 
         map = new Map("assets/mapTileSet.png", 1, 64);
         map.loadMap("assets/mapFile.txt", 7, 12);
@@ -40,6 +46,8 @@ public class NuPogodi {
         for (int i = 0; i < 20; i++) createEgg();
 
         Display.getInstance().printAllGraphics();
+
+
     }
 
     private void initPlayer(int size, int x, int y) {
@@ -71,7 +79,7 @@ public class NuPogodi {
         ));
         eggs.addComponent(new SpriteComponent(
                 eggs.getComponent(new TransformComponent()),
-                "assets\\images.png", 186
+                "assets\\images.png", 300
         ));
         eggs.addComponent(new ColliderComponent(
                 eggs.getComponent(new TransformComponent()).getPosition()
@@ -86,7 +94,7 @@ public class NuPogodi {
 
         dropEggs();
 
-
+        if(player.getComponent(new LiveComponent()).getLives() == 0) GamePlay = false;
     }
 
     private void dropEggs() {

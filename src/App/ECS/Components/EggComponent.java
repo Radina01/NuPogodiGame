@@ -68,9 +68,9 @@ public class EggComponent extends Component {
 
     @Override
     public void update() {
-        if(transform.getPosition().y > Display.getInstance().getHeight()) {
+        if(transform.getPosition().y > Display.getInstance().getHeight() && transform.getPosition().y < Display.getInstance().getHeight() + 50) {
             remove();
-            //NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupPlayer.ordinal()).get(0).getComponent(new LiveComponent()).reduceLife();
+            NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupPlayer.ordinal()).get(0).getComponent(new LiveComponent()).reduceLife();
         }
     }
 

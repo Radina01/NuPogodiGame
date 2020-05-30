@@ -14,7 +14,7 @@ public class Main {
 
         nuPogodi.init();
 
-        while(true) {
+        while(NuPogodi.GamePlay) {
 
             frameStart = Calendar.getInstance().getTimeInMillis();
 

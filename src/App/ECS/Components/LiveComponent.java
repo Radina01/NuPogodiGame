@@ -15,8 +15,16 @@ public class LiveComponent extends Component {
 
     @Override
     public void init() {
+        int size = Display.getInstance().getWidth() / 15;
         for (int i = 0; i < lives; i++) {
             textures[i] = new TextureManager();
+            textures[i].setX(5000);
+            textures[i].setY(20);
+            textures[i].setHeight(size);
+            textures[i].setWidth(size);
+            textures[i].setPath("assets\\heart.png");
+            Display.getInstance().addGraphic(textures[i]);
+
         }
     }
 
@@ -24,18 +32,18 @@ public class LiveComponent extends Component {
         lives-=1;
     }
 
+    public int getLives() {
+        return lives;
+    }
+
     @Override
     public void update() {
         int size = Display.getInstance().getWidth() / 15;
         for (int i = 0; i < 3; i++) {
-            textures[0].setX(5000);
+            textures[i].setX(5000);
         }
         for (int i = 0; i < lives; i++) {
-            textures[i].setHeight(size);
-            textures[i].setWidth(size);
             textures[i].setX(20 + size + size * i);
-            textures[i].setPath("assets\\sprite1.png");
-            Display.getInstance().addGraphic(textures[i]);
         }
     }
 
