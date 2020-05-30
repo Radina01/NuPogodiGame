@@ -86,7 +86,6 @@ public class KeyboardManager extends Component {
                     transform.setX(r.x + r.width - transform.getPosition().width);
                     break;
             }
-            System.out.println(r.x + " " + r.y + " " + r.width + " " + r.height + " " + position.getPosition());
             lastPosition = position.getPosition();
         }
     }

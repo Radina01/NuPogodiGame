@@ -72,7 +72,7 @@ public class EggComponent extends Component {
     public void update() {
         if(transform.getPosition().y > Display.getInstance().getHeight()) {
             remove();
-            NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupPlayer.ordinal()).get(0).getComponent(new LiveComponent()).reduceLife();
+            //NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupPlayer.ordinal()).get(0).getComponent(new LiveComponent()).reduceLife();
         }
     }
 

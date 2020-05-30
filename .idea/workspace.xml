@@ -3,16 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/LiveComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/LiveComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +46,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NuPogodiGame-recordsFile" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -203,26 +201,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590605437330" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590058016718">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590817716017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590816203978">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590817716017" />
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590820177595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
-    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590816203978">
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
+    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590820177595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
-    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590816203978">
+    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
+    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590820177595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
-    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590816203978">
+    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590820177595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590820177595" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

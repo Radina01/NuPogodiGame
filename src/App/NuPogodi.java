@@ -85,9 +85,14 @@ public class NuPogodi {
             }
         }
 
+        dropEggs();
 
+
+    }
+
+    private void dropEggs() {
         if (Calendar.getInstance().getTimeInMillis() - time >= difficulty) {
-            difficulty -= difficulty < 200 ? 0 : 3;
+            difficulty -= difficulty < 200 ? 0 : 2;
             System.out.println(difficulty);
             for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
                 if (!e.getComponent(new EggComponent()).isDropped()) {
@@ -98,7 +103,6 @@ public class NuPogodi {
             time = Calendar.getInstance().getTimeInMillis();
 
         }
-
     }
 
     public void render() {
