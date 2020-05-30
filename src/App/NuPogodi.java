@@ -11,7 +11,7 @@ public class NuPogodi {
         );
         menu = new Menu();
         //menu.update();
-        Display.getInstance().changePage(menu.pageManager.menuState);
+        Display.getInstance().changePage(Menu.pageManager.menuState);
     }
 
     public void update() {

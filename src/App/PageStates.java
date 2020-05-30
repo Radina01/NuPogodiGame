@@ -36,6 +36,15 @@ class PageManager {
         playState.addGraphic(
                 new TextureManager(50, 50, 300, 300, "assets\\sprite1.png")
         );
+        playState.addButton(X_BUTTON_COORDINATE * 2 - 20,
+                Display.getInstance().height / 2 + 180,
+                X_BUTTON_COORDINATE,
+                Display.getInstance().height / 8,
+                "Exit");
+
+    }
+
+    public void playState(){
         playState.addJTextArea(100, 100, 100, 50);
     }
 

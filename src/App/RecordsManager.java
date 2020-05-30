@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class RecordsManager {
-
-    // writeInFile("sortedNames.txt", sortedNames);
-    public static List<String> readFileNames(String nameRecords) throws FileNotFoundException {
+    public static List<String> readFileNames() throws FileNotFoundException {
         File file = new File("nameRecords.txt");
         Scanner fileReader = new Scanner(file, "windows-1251");
         List<String> names = new ArrayList<>();
