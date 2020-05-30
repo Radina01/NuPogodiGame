@@ -19,7 +19,7 @@ public class TextureManager extends JComponent {
     private int animationXPosition = 0;
     private int animationYPosition = 0;
 
-    TextureManager() {
+    public TextureManager() {
     }
 
     public TextureManager(int x, int y, int width, int height, String path, boolean flip) {
@@ -88,6 +88,18 @@ public class TextureManager extends JComponent {
         });
 
         animationThread.start();
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public void setX(int x) {

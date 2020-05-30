@@ -1,8 +1,11 @@
 package App.ECS.Components;
 
+import App.Collide;
+import App.Display;
 import App.ECS.Component;
 import App.ECS.Entity;
 import App.NuPogodi;
+import App.Rect;
 
 import java.util.List;
 
@@ -33,14 +36,14 @@ public class EggComponent extends Component {
 
     public void drop() {
         dropped = true;
-        position.setPosition((int)(Math.random() * 4));
+        position.setPosition((int) (Math.random() * 4));
         TransformComponent t = startPositions.get(position.getPosition()).getComponent(new TransformComponent());
         switch (position.getPosition()) {
             case 1:
             case 3: {
                 transform.setX(t.getPosition().x + t.getPosition().width);
                 transform.setY(t.getPosition().y);
-                transform.setVelX(-1);
+                transform.setVelX(-1.25f);
                 transform.setVelY(1);
                 break;
             }
@@ -48,7 +51,7 @@ public class EggComponent extends Component {
             case 2: {
                 transform.setX(t.getPosition().x);
                 transform.setY(t.getPosition().y);
-                transform.setVelX(1);
+                transform.setVelX(1.25f);
                 transform.setVelY(1);
                 break;
             }
@@ -66,22 +69,11 @@ public class EggComponent extends Component {
 
 
     @Override
-    public void update() {/*
-        texture.setX(transform.getX());
-        texture.setY(transform.getY());
-
-
-        if (transform.getX() >= Display.getInstance().getWidth() / 2 - ((Display.getInstance().getWidth() / 3) / 2)
-                && transform.getX() <= Display.getInstance().getWidth() / 2 + ((Display.getInstance().getWidth() / 3) / 2)
-                && transform.getVelX() != 0) {
-            transform.setVelX(transform.getVelX() - 0.1f);
+    public void update() {
+        if(transform.getPosition().y > Display.getInstance().getHeight()) {
+            remove();
+            NuPogodi.manager.getGroup(NuPogodi.groupLabels.groupPlayer.ordinal()).get(0).getComponent(new LiveComponent()).reduceLife();
         }
-
-        transform.setVelY(transform.getVelY() + (transform.getVelX() == 0 ? 0.2f : 0.1f));
-
-        if(transform.getY() > Display.getInstance().getHeight()) {
-            System.gc();
-        }*/
     }
 
     @Override

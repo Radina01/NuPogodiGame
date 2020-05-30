@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe18b38-0e45-42b5-87a2-1463f598934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Display.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/EggComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/SpriteComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TileComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TileComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/TransformComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi$groupLabels.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi$groupLabels.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/ECS/components/KeyboardManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuPogodi/App/NuPogodi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/EggComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/SpriteComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TileComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TileComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/TransformComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/KeyboardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/LiveComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ECS/Components/ScoreComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/NuPogodi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/NuPogodi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/TextureManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,10 +195,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1590488698625" />
-    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1590757866215">
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1590815487111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590757866215" />
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590815487111" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590605437330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -214,30 +207,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590058016718" />
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590759547317">
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom" timestamp="1590816203978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590759547317" />
-    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590759547316">
+    <state width="1322" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.center" timestamp="1590816203978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590759547316" />
-    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590759547316">
+    <state width="1322" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.left" timestamp="1590816203978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590759547316" />
-    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590759547316">
+    <state width="1322" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right" timestamp="1590816203978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590759547316" />
+    <state width="1322" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590816203978" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1589906551635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589906551635" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1590735370427">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1590810919678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590735370427" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590810919678" />
     <state x="387" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590486608854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

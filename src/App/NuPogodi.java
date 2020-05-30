@@ -12,6 +12,7 @@ public class NuPogodi {
     private Map map;
     Entity player;
     private long time = Calendar.getInstance().getTimeInMillis();
+    private int difficulty = 1000;
 
     public enum groupLabels {
         groupStartPosition,
@@ -40,7 +41,7 @@ public class NuPogodi {
     }
 
     private void initPlayer(int size, int x, int y) {
-        player.addComponent(new TransformComponent(x, y, size,size));
+        player.addComponent(new TransformComponent(x, y, size, size));
         player.addComponent(new PositionComponent());
         player.addComponent(new SpriteComponent(
                 player.getComponent(new TransformComponent()),
@@ -50,9 +51,11 @@ public class NuPogodi {
         player.addComponent(new KeyboardManager(
                 player.getComponent(new SpriteComponent()),
                 player.getComponent(new PositionComponent()),
-                player.getComponent(new ColliderComponent())
+                player.getComponent(new ColliderComponent()),
+                player.getComponent(new TransformComponent())
         ));
         player.addComponent(new LiveComponent());
+        player.addComponent(new ScoreComponent());
         player.addGroup(groupLabels.groupPlayer.ordinal());
     }
 
@@ -76,21 +79,20 @@ public class NuPogodi {
 
     public void update() {
         manager.update();
-        for (Entity e: manager.getGroup(groupLabels.groupColliders.ordinal())) {
-            if(Collide.AABB(e.getComponent(new ColliderComponent()), player.getComponent(new ColliderComponent()))) {
+        for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
+            if (Collide.AABB(e.getComponent(new ColliderComponent()), player.getComponent(new ColliderComponent()))) {
                 e.getComponent(new EggComponent()).remove();
-                System.out.println("true");
             }
         }
 
 
-        if (Calendar.getInstance().getTimeInMillis() - time >= 1000) {
-            if((int)(Math.random() * 2) == 1) {
-                for (Entity e: manager.getGroup(groupLabels.groupColliders.ordinal())) {
-                    if(!e.getComponent(new EggComponent()).isDropped()) {
-                        e.getComponent(new EggComponent()).drop();
-                        break;
-                    }
+        if (Calendar.getInstance().getTimeInMillis() - time >= difficulty) {
+            difficulty -= difficulty < 200 ? 0 : 3;
+            System.out.println(difficulty);
+            for (Entity e : manager.getGroup(groupLabels.groupColliders.ordinal())) {
+                if (!e.getComponent(new EggComponent()).isDropped()) {
+                    e.getComponent(new EggComponent()).drop();
+                    break;
                 }
             }
             time = Calendar.getInstance().getTimeInMillis();
